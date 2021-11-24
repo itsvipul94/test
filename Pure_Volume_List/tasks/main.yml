@@ -1,0 +1,11 @@
+---
+# tasks file for Pure_Volume_List
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: list volumes
+    shell: df -k
+    register: op
+  - debug:
+      var: op
+
